@@ -1,0 +1,23 @@
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "API is working"
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    data = request.json
+    symptoms = data.get("symptoms")
+
+    disease = "Flu"
+    medicines = ["Paracetamol", "Rest", "Hydration"]
+
+    return jsonify({
+        "disease": disease,
+        "medicines": medicines
+    })
+
+if __name__ == '__main__':
+    app.run(debug=True)
