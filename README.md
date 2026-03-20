@@ -25,4 +25,4 @@ where these medicines are available.
 - Mobile app version
 
 ## Note
-This system is for educational purposes and not a replacement for professional medical advice.
+This system is for educational purposes and not a replacement for professional medical advice...
