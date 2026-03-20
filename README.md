@@ -1,4 +1,4 @@
-# AI-Based Disease Classification & Medicine Recommendation System
+7# AI-Based Disease Classification & Medicine Recommendation System
 
 ## Overview
 Misdiagnosis and lack of access to the right medicines often delay proper treatment. 
@@ -25,4 +25,4 @@ where these medicines are available.
 - Mobile app version
 
 ## Note
-This system is for educational purposes and not a replacement for professional medical advice...
+This system is for educational purposes and not a replacement for professional medical advice.
