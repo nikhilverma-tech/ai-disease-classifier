@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health AI</title>
+</head>
+<body>
+    <h1>Disease Prediction System</h1>
+    <input type="text" id="symptoms" placeholder="Enter symptoms">
+    <button onclick="predict()">Predict</button>
+
+    <p id="result"></p>
+
+    <script>
+        function predict() {
+            fetch('http://127.0.0.1:5000/predict', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    symptoms: document.getElementById('symptoms').value
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('result').innerText =
+                    "Disease: " + data.disease + 
+                    " | Medicines: " + data.medicines.join(', ');
+            });
+        }
+    </script>
+</body>
+</html>
